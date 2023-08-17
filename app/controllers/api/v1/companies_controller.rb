@@ -1,5 +1,6 @@
 class Api::V1::CompaniesController <ApiController
     before_action :set_company, only: [:show, :update, :destroy]
+    load_and_authorize_resource
 
     def index
         # @companies = Company.all
